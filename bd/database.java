@@ -36,7 +36,7 @@ public class database {
 				int id = rs.getInt("id");
 				int section = rs.getInt("section");
 				String dep = rs.getString("department");
-				System.out.printf("%s %s %d %d %d %s",firstName, lastName, age, id, section, dep);
+				System.out.printf("%s %s %d %d %d %s\n",firstName, lastName, age, id, section, dep);
 			}
 
 			con.close();

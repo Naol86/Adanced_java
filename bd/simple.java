@@ -25,6 +25,8 @@ public class simple {
 				System.out.println(id +"  "+ title);
 			}
 
+			con.close();
+
 
 		} catch (Exception e) {
 			System.out.println(e);
