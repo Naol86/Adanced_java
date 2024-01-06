@@ -3,7 +3,7 @@ package cons_pro;
 import java.util.Stack;
 
 public class test {
-     Stack<Integer> d = new Stack<Integer>();
+     Stack<Integer> stack = new Stack<Integer>();
      int MAXSIZE;
      int count = 0;
 
@@ -17,8 +17,8 @@ public class test {
                     System.out.println("producer is waiting");
                     wait();
                }
-               d.add(n);
-               System.out.println("we added value n " + n + " " + d);
+               stack.add(n);
+               System.out.println("we added value n " + n + " " + stack);
                notifyAll();
                count++;
                
@@ -35,7 +35,7 @@ public class test {
                     System.out.println("consumer is waiting");
                     wait();
                }
-               System.out.println("Poped " + d.pop() + " " + d);
+               System.out.println("Poped " + stack.pop() + " " + stack);
                count--;
                notifyAll();
           }catch (Exception e)

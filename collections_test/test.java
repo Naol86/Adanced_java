@@ -4,12 +4,16 @@ import java.util.*;
 
 public class test{
 	public static void main(String[] args) {
-		HashMap<String, Integer> index = new HashMap<>();
-		String[] numbers = {"one","two","three","four"};
-		int i = 1;
-		for(String number : numbers){
-			index.put(number, i++);
+		TreeMap<String, Integer> num = new TreeMap<>();
+		num.put("three",3);
+		num.put("one",1);
+		num.put("two",2);
+		System.out.println(num);
+		
+		for(String n : num.keySet()){
+			System.out.println(n +" : "+ num.get(n));
 		}
-		System.out.println(index);
+
+
 	}
 }

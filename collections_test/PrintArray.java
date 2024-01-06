@@ -6,4 +6,10 @@ public class PrintArray<T> {
 			System.out.println(lis[i]);
 		}
 	}
+	
+	public <E> void test(E lis[]){
+		for(int i = 0; i < lis.length;i++){
+			System.out.println(lis[i]);
+		}
+	}
 }

@@ -15,6 +15,9 @@ public class MyLinkedHashSet {
 		while(iter.hasNext()){
 			System.out.println(iter.next());
 		}
+		names.remove("naol");
+		System.out.println(names.isEmpty());
+		System.out.println(names);
 		// it kept the order of insertion
 	}
 }

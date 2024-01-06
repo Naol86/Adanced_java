@@ -22,6 +22,14 @@ public class database {
 			pS.setString(6, "sf");
 			pS.addBatch();
 
+			pS.setString(1, "hana");
+			pS.setString(2, "mesfin");
+			pS.setString(3, "1234");
+			pS.setString(4, "32");
+			pS.setString(5, "4");
+			pS.setString(6, "sf");
+			pS.addBatch();
+
 			int[] result = pS.executeBatch();
 
 			for (int i : result) {

@@ -4,7 +4,7 @@ package cons_pro;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        test test1 = new test(100);
+        test test1 = new test(5);
         Producer p = new Producer( test1);
         Consumer c = new Consumer(test1);
 

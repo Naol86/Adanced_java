@@ -34,11 +34,24 @@ public class MyArrayList {
 		for(Integer i : list_3)
 			System.out.println(i);
 		
+		// get the first element in the array
+		System.out.println("get index 1 : " + list_1.get(1));
+
+		// remove the last element in the array
+		System.out.println("before : " + list_2);
+		list_2.remove(list_2.size() - 1);
+		System.out.println("after : " + list_2);
+
 		// print list 2 using Iterator class
 		System.out.print("this is list 2 : ");
 		Iterator iter = list_2.iterator();
 		while(iter.hasNext())
 			System.out.printf("%d ",iter.next());
+
+
+		/**
+		 * 
+		 */
 
 	}
 }
