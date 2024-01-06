@@ -1,7 +1,7 @@
 
 # This is Naol Kasinet
 
-## Welcome to the Advanced Programming Course - 3rd Year, 1st Semester
+## Welcome to the Advanced Programming Course - 3rd Year, 1st Semester Software Engineering Department
 
 ## Course Overview:
 
