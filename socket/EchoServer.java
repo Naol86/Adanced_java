@@ -19,8 +19,6 @@ public class EchoServer {
 			PrintWriter out = new PrintWriter(soc.getOutputStream(), true);
 			out.println("your name is " + name);
 
-
-
 			get.close();
 			soc.close();
 			ss.close();

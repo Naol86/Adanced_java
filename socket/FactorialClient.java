@@ -10,20 +10,26 @@ public class FactorialClient {
 			System.out.println("Client started");
 			Socket soc = new Socket("localhost", 9806);
 
-			Scanner in = new Scanner(System.in);
-			System.out.print("Enter a number : ");
-			int x = in.nextInt();
+			while (true){
 
-			PrintWriter out = new PrintWriter(soc.getOutputStream(), true);
-			out.println(x);
+				Scanner in = new Scanner(System.in);
+				System.out.print("Enter a number : ");
+				int x = in.nextInt();
+	
+				PrintWriter out = new PrintWriter(soc.getOutputStream(), true);
+				out.println(x);
+				if (x < 0){
+					in.close();
+					soc.close();
+					break;
+				}
+	
+				Scanner get = new Scanner(soc.getInputStream());
+				int ans = get.nextInt();
+	
+				System.out.println("factorial of " + x + " is " + ans);
+			}
 
-			Scanner get = new Scanner(soc.getInputStream());
-			int ans = get.nextInt();
-
-			System.out.println("factorial of " + x + " is " + ans);
-
-			in.close();
-			soc.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

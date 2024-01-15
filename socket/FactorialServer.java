@@ -13,15 +13,20 @@ public class FactorialServer {
 			Socket soc = ss.accept();
 			System.out.println("Connection established with client");
 
-			Scanner get = new Scanner(soc.getInputStream());
-			int x = get.nextInt();
+			while (true){
 
-			PrintWriter out = new PrintWriter(soc.getOutputStream(), true);
-			out.println(factorial(x));
+				Scanner get = new Scanner(soc.getInputStream());
+				int x = get.nextInt();
+				if (x < 0){
+					soc.close();
+					ss.close();
+					break;
+				}
+	
+				PrintWriter out = new PrintWriter(soc.getOutputStream(), true);
+				out.println(factorial(x));
+			}
 
-
-			soc.close();
-			ss.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

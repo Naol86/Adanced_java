@@ -82,7 +82,7 @@ public class GroupChatClient {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Enter user name for group chat : ");
+		System.out.print("Enter user name for group chat: ");
 		String username = scanner.nextLine();
 		Socket soc = new Socket("localhost",9806);
 		GroupChatClient client = new GroupChatClient(soc, username);
