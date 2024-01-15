@@ -26,7 +26,6 @@ public class GroupChatClientHandler implements Runnable{
 			broadcastMessage("Server Client " + ClientUserName + " has entered the chat");
 
 		} catch (Exception e) {
-			System.out.println(e + "one");
 			closeEveryThing(soc, bufferedReader, bufferedWriter);
 		}
 	}
@@ -41,7 +40,6 @@ public class GroupChatClientHandler implements Runnable{
 					client.bufferedWriter.flush();
 				}
 			} catch (Exception e) {
-				System.out.println(e + "two");
 				closeEveryThing(soc, bufferedReader, bufferedWriter);
 			}
 		}
@@ -65,7 +63,7 @@ public class GroupChatClientHandler implements Runnable{
 				soc.close();
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 	}
 
@@ -76,7 +74,6 @@ public class GroupChatClientHandler implements Runnable{
 				messageFromClient = bufferedReader.readLine();
 				broadcastMessage(messageFromClient);
 			} catch (Exception e) {
-				System.out.println("three");
 				// closeEveryThing(soc, bufferedReader, bufferedWriter);
 				break;
 			}
