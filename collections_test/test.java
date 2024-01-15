@@ -4,11 +4,16 @@ import java.util.*;
 
 public class test{
 	public static void main(String[] args) {
-		Vector<Integer> numbers = new Vector<Integer>();
-		for (int i = 11; i  > 0; i--)
-			numbers.add(i*i);
-		Collections.sort(numbers);
-		for (Integer number : numbers)
-			System.out.println(number);
+		TreeMap<String, Integer> num = new TreeMap<>();
+		num.put("three",3);
+		num.put("one",1);
+		num.put("two",2);
+		System.out.println(num);
+		
+		for(String n : num.keySet()){
+			System.out.println(n +" : "+ num.get(n));
+		}
+
+
 	}
 }

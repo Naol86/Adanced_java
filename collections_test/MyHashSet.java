@@ -6,6 +6,7 @@ public class MyHashSet {
 	public static void main(String[] args) {
 		//  creating hash set
 		HashSet<Integer> list_1 = new HashSet<>();
+
 		// adding element in to the hash set
 		list_1.add(10);
 		list_1.add(4);

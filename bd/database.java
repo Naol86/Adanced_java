@@ -9,14 +9,43 @@ public class database {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,user,pass);
+			System.out.println("connected");
 			Statement st = con.createStatement();
-			int rs = st.executeUpdate("create table new_name(firstName varchar(100), id INT)");
-			System.out.println(rs);
-			// while(rs.next()){
-			// 	int id = rs.getInt("id");
-			// 	String title = rs.getString("title");
-			// 	System.out.println(id + " " + title);
-			// }
+			int x = st.executeUpdate("create table if not exists student(firstName varchar(100),lastName Varchar(100), id INT, age INT, section INT, department Varchar(100))");
+			String sql = "INSERT INTO student (firstName, lastName, id, age, section, department) VALUES (?, ?, ?, ?, ?, ?)";
+			PreparedStatement pS = con.prepareStatement(sql);
+			pS.setString(1, "naol");
+			pS.setString(2, "kasinet");
+			pS.setString(3, "25520");
+			pS.setString(4, "21");
+			pS.setString(5, "4");
+			pS.setString(6, "sf");
+			pS.addBatch();
+
+			pS.setString(1, "hana");
+			pS.setString(2, "mesfin");
+			pS.setString(3, "1234");
+			pS.setString(4, "32");
+			pS.setString(5, "4");
+			pS.setString(6, "sf");
+			pS.addBatch();
+
+			int[] result = pS.executeBatch();
+
+			for (int i : result) {
+                System.out.println("Rows affected: " + i);
+            }
+
+			ResultSet rs = st.executeQuery("select * from student");
+			while(rs.next()){
+				String firstName = rs.getString("firstName");
+				String lastName = rs.getString("lastName");
+				int age = rs.getInt("age");
+				int id = rs.getInt("id");
+				int section = rs.getInt("section");
+				String dep = rs.getString("department");
+				System.out.printf("%s %s %d %d %d %s\n",firstName, lastName, age, id, section, dep);
+			}
 
 			con.close();
 		} catch (Exception e) {

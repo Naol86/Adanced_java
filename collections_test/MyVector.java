@@ -23,5 +23,12 @@ public class MyVector {
 		while(iter.hasNext()){
 			System.out.println(iter.next());
 		}
+		System.out.println(list_1.contains("maths"));
+		list_1.add(0,"maths");
+		System.out.println(list_1.contains("maths"));
+
+		for (String a : list_1)
+			System.out.println(a);
+
 	}
 }

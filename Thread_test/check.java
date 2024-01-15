@@ -38,9 +38,7 @@ public class check {
 
 class Count_number {
 	int num = 0;
-	public void count(){
-		
+	public synchronized void count(){
 			num++;
-		
 	}
 }
