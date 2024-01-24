@@ -15,14 +15,14 @@ public class simple {
 			Statement st = con.createStatement();
 			
 			// execute statement
-			String query = "SELECT * FROM tv_shows";
+			String query = "SELECT * FROM tv_genres";
 			ResultSet rs = st.executeQuery(query);
 			
 			// print result
 			while (rs.next()){
 				int id = rs.getInt("id");
-				String title = rs.getString("title");
-				System.out.println(id +"  "+ title);
+				String name = rs.getString("name");
+				System.out.println(id +"  "+ name);
 			}
 
 			con.close();
