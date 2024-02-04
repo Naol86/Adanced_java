@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<center>
+
+    <h2>User Information Form</h2>
+</center>
+
+<form action="Register" method="post">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="firstname">First Name:</label><br>
+    <input type="text" id="firstname" name="firstname" required><br><br>
+
+    <label for="lastname">Last Name:</label><br>
+    <input type="text" id="lastname" name="lastname" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="sex">Sex:</label><br>
+    <select id="sex" name="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select><br><br>
+
+    <label for="department">Department:</label><br>
+    <input type="text" id="department" name="department" required><br><br>
+	
+    <label for="hobbies">Hobbies:</label>
+    <input type="checkbox" id="football" name="hobbies" value="football">
+    <label for="football">Football</label>
+    <input type="checkbox" id="reading" name="hobbies" value="reading">
+    <label for="reading">Reading</label>
+    <input type="checkbox" id="swimming" name="hobbies" value="swimming">
+    <label for="swimming">Swimming</label><br>
+
+    <label for="Password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <input type="submit" value="Submit">
+	<br>
+</form>
+	<a href="List"> 
+		<button>List all</button>
+	</a>
+</body>
+</html>
